@@ -14,6 +14,7 @@ def delete_file(path):
     """
     if os.path.exists(path):
         os.remove(path)
+        print("Delete {} done.".format(path))
     else:
         print("The file does not exist")
 
