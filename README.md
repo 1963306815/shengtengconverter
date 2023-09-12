@@ -82,6 +82,8 @@ utils.delete_pytorch_models('path/to/delete')
 - **1.0.0** (2023-09-12): 第一个正式版本
 - **1.0.1** (2021-09-12): 删除了list_onnx_models()函数中不必要的递归调用
 - **1.0.2** (2021-09-12): 增加了__version__属性
+- **1.0.3** (2021-09-12): 修复NotImplementedError: Conversion not implemented for op_type=Relu6.
+- **1.0.4** (2021-09-12): 把trans包中与模型检索和删除相关的函数移动到新的包utils
 
 ## 作者
 - **[张志扬](https://github.com/1963306815)**
