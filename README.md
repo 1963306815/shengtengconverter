@@ -19,12 +19,19 @@ pip3 install shengtengconverter
 导入所需的包：
 ```python
 from shengtengconverter import trans
+from shengtengconverter import utils
 ```
 
 列出路径下的所有onnx模型：
 ```python
-onnx_model_paths = trans.list_onnx_models('path')
+onnx_model_paths = utils.list_onnx_models('path')
 print(onnx_model_paths)
+```
+
+列出路径下的所有pytorch模型：
+```python
+pytorch_model_paths = utils.list_pytorch_models('path')
+print(pytorch_model_paths)
 ```
 
 将onnx模型转换为pytorch模型：
@@ -51,9 +58,19 @@ for i in onnx_model_paths:
     trans.convert_onnx_to_pytorch(i, pytorch_path='path/to/save')
 ```
 
-另外，你可以直接通过main()函数一键运行以上流程，只需输入path，就会自动检索路径下的onnx模型并转换为pytorch模型
+另外，你可以直接通过main()函数一键运行以上流程，只需输入path，就会自动检索路径下的onnx模型并转换为pytorch模型：
 ```python
 trans.main('path/contain/onnx')
+```
+
+删除路径下的所有onnx模型：
+```python
+utils.delete_onnx_models('path/to/delete')
+```
+
+删除路径下的所有pytorch模型：
+```python
+utils.delete_pytorch_models('path/to/delete')
 ```
 
 ## 依赖

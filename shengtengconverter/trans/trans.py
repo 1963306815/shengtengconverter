@@ -1,25 +1,7 @@
 import onnx
 from shengtengconverter.onnx2pytorch import ConvertModel
 import torch
-import os
-
-
-def list_onnx_models(path):
-    """
-    This function is used to list all onnx model in the path.
-
-    Parameters:
-        path(str): The directory path may contain onnx model.
-
-    Returns:
-        str: The list of onnx model path.
-    """
-    onnx_model = []
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            if file.endswith(".onnx"):
-                onnx_model.append(os.path.join(root, file))
-    return onnx_model
+from shengtengconverter.utils import list_onnx_models
 
 
 def convert_onnx_to_pytorch(onnx_model_path, experimental=False, pytorch_path=None):
@@ -70,4 +52,3 @@ def main(path):
     onnx_model = list_onnx_models(path)
     for i in onnx_model:
         convert_onnx_to_pytorch_batch(i)
-    
