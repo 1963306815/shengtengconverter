@@ -275,7 +275,7 @@ def convert_operations(onnx_graph, opset_version, batch_dim=0, enable_pruning=Tr
             op = Where()
         elif node.op_type == "SiLU":
             op = torch.nn.SiLU()
-        elif node.op_type == "ReLU6":
+        elif node.op_type == "Relu6":
             op = torch.nn.ReLU6()
         else:
             op = getattr(torch, node.op_type.lower(), None)
