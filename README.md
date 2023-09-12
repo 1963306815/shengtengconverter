@@ -73,6 +73,20 @@ utils.delete_onnx_models('path/to/delete')
 utils.delete_pytorch_models('path/to/delete')
 ```
 
+获取onnxruntime在本机器支持的所有provider：
+```python
+providers = utils.get_onnxruntime_provider()
+print(providers)
+```
+
+获取onnx模型的输入和输出，返回一个列表，每个元素是一个字典，键为name, type, shape：
+```python
+input_info = utils.get_onnx_input('path/to/onnx')
+print(input_info)
+output_info = utils.get_onnx_output('path/to/onnx')
+print(output_info)
+```
+
 ## 依赖
     Python>=3.6
     onnx>=1.13.1
