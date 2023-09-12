@@ -11,4 +11,5 @@ setup(
     include_package_data=True,
     python_requires='>=3.6',
     install_requires=['onnx>=1.13.1','torch>=1.11.0'],
+    url='https://github.com/1963306815/shengtengconverter'
 )
