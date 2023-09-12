@@ -85,7 +85,8 @@ utils.delete_pytorch_models('path/to/delete')
 - **1.0.3** (2021-09-12): 修复NotImplementedError: Conversion not implemented for op_type=Relu6.
 - **1.0.4** (2021-09-12): 把trans包中与模型检索和删除相关的函数移动到新的包utils
 - **1.0.5** (2021-09-12): 添加了删除文件的提示
-- **2.0.0** (2021-09-13): utils包增加了获取onnx模型输入输出信息的函数
+- **2.0.0** (2021-09-13): 
+- **2.0.1** (2021-09-13): 修复utils包不在shengtengconverter的__init__文件中定义
 
 ## 作者
 - **[张志扬](https://github.com/1963306815)**
