@@ -19,8 +19,6 @@ def list_onnx_models(path):
         for file in files:
             if file.endswith(".onnx"):
                 onnx_model.append(os.path.join(root, file))
-        for dir in dirs:
-            onnx_model.extend(list_onnx_models(dir))
     return onnx_model
 
 
