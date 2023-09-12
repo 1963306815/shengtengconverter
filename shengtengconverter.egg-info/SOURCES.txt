@@ -59,5 +59,6 @@ shengtengconverter/onnx2pytorch/operations/where.py
 shengtengconverter/trans/__init__.py
 shengtengconverter/trans/trans.py
 shengtengconverter/utils/__init__.py
+shengtengconverter/utils/analyse.py
 shengtengconverter/utils/delete.py
 shengtengconverter/utils/view.py
