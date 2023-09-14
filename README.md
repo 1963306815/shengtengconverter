@@ -101,7 +101,7 @@ print(output_info)
 - **1.0.5** (2021-09-12): 添加了删除文件的提示
 - **2.0.0** (2021-09-13): utils包增加了获取onnx模型输入输出信息的函数
 - **2.0.1** (2021-09-13): 修复utils包不在shengtengconverter的__init__文件中定义
-- **2.1.0** (2021-09-14): 
+- **3.0.0** (2021-09-14): 
   - main()函数改名为convert_onnx_to_pytorch_all()
   - utils包增加检查pytorch模型是否包含结构信息的函数check_pytorch_model()
   - utils包增加获取pytorch模型字典的函数get_pytorch_state_dict()

@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='shengtengconverter',
-    version='2.1.0',
+    version='3.0.0',
     description='A simple converter for Shengteng',
     author='zhangzhiyang',
     author_email='1963306815@qq.com',

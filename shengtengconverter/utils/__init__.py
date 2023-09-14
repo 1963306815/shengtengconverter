@@ -3,4 +3,4 @@ from .delete import *
 from .analyse import *
 from .check import *
 
-__version__ = "2.1.0"
+__version__ = "3.0.0"
