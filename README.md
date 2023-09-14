@@ -110,7 +110,7 @@ print(output_info)
   - trans包增加转换tensorflow_pb模型为onnx模型的函数convert_tensorflow_to_onnx()
   - trans包增加转换onnx模型为tensorflow_savedmodel模型的函数convert_onnx_to_tensorflow_savedmodel()
   - 规范了函数说明文档
-- **3.0.1** (2021-09-14): 由于tensorflow-gpu库已经弃用，从requirements列表中移除
+- **3.1.0** (2021-09-14): 由于tensorflow-gpu库已经弃用，从requirements列表中移除
 
 ## 作者
 - **[张志扬](https://github.com/1963306815)**
