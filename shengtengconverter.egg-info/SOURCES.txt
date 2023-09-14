@@ -60,5 +60,6 @@ shengtengconverter/trans/__init__.py
 shengtengconverter/trans/trans.py
 shengtengconverter/utils/__init__.py
 shengtengconverter/utils/analyse.py
+shengtengconverter/utils/check.py
 shengtengconverter/utils/delete.py
 shengtengconverter/utils/view.py
