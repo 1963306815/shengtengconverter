@@ -119,6 +119,9 @@ print(output_info)
   - 修复NotImplementedError: Extraction of attribute size not implemented.
   - 修复NotImplementedError: Extraction of attribute bias not implemented.
   - 修复TypeError: __init__() got an unexpected keyword argument 'weight_multiplier'，做了算子字典与构造函数参数的适配
+- **3.1.3** (2021-09-18):
+  - convert_onnx_to_pytorch_all()函数增加了异常处理，现在一个模型转换失败不会影响其他模型的转换
+  - 增加了_convert_onnx_to_pytorch_test()函数，与前者的区别是没有异常处理，用于测试
 
 ## 作者
 - **[张志扬](https://github.com/1963306815)**
