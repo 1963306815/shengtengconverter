@@ -184,6 +184,10 @@ def extract_attributes(node):
         elif node.op_type == "Resize":
             # These parameters are not used, warn in Resize operator
             kwargs[attr.name] = extract_attr_values(attr)
+        elif attr.name == "size":
+            kwargs["size"] = extract_attr_values(attr)
+        elif attr.name == "bias":
+            kwargs["bias"] = extract_attr_values(attr)
         else:
             raise NotImplementedError(
                 "Extraction of attribute {} not implemented.".format(attr.name)

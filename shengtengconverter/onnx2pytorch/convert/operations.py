@@ -277,6 +277,15 @@ def convert_operations(onnx_graph, opset_version, batch_dim=0, enable_pruning=Tr
             op = torch.nn.SiLU()
         elif node.op_type == "Relu6":
             op = torch.nn.ReLU6()
+        elif node.op_type == "LRN":
+            attributes = extract_attributes(node)
+            if 'weight_multiplier' in attributes:
+                attributes['alpha'] = attributes.pop('weight_multiplier')
+            if 'bias_multiplier' in attributes:
+                attributes['beta'] = attributes.pop('bias_multiplier')
+            if 'bias' in attributes:
+                attributes['k'] = attributes.pop('bias')
+            op = torch.nn.LocalResponseNorm(**attributes)
         else:
             op = getattr(torch, node.op_type.lower(), None)
             if op is None:

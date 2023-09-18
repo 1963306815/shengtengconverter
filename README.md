@@ -114,6 +114,11 @@ print(output_info)
 - **3.1.1** (2021-09-18): 
   - 修复NotImplementedError: auto_pad=SAME_UPPER functionality not implemented.
   - 修复ModuleNotFoundError: No module named 'onnx2pytorch'
+- **3.1.2** (2021-09-18):
+  - 修复NotImplementedError: Conversion not implemented for op_type=LRN.
+  - 修复NotImplementedError: Extraction of attribute size not implemented.
+  - 修复NotImplementedError: Extraction of attribute bias not implemented.
+  - 修复TypeError: __init__() got an unexpected keyword argument 'weight_multiplier'，做了算子字典与构造函数参数的适配
 
 ## 作者
 - **[张志扬](https://github.com/1963306815)**
