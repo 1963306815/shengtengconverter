@@ -25,8 +25,8 @@ class Loop(nn.Module):
         body: onnx.GraphProto,
     ):
         super().__init__()
-        self.ops = import_module("onnx2pytorch.convert.operations")
-        self.c = import_module("onnx2pytorch.constants")
+        self.ops = import_module("shengtengconverter.onnx2pytorch.convert.operations")
+        self.c = import_module("shengtengconverter.onnx2pytorch.constants")
 
         self.body = body
         self.batch_dim = batch_dim

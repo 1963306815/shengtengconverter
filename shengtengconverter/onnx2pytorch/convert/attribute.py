@@ -69,12 +69,12 @@ def extract_attributes(node):
                 kwargs["weight_multiplier"] = extract_attr_values(attr)
         elif attr.name == "auto_pad":
             value = extract_attr_values(attr)
-            if value == "NOTSET":
-                pass
-            else:
-                raise NotImplementedError(
-                    "auto_pad={} functionality not implemented.".format(value)
-                )
+            # if value == "NOTSET":
+            #     pass
+            # else:
+            #     raise NotImplementedError(
+            #         "auto_pad={} functionality not implemented.".format(value)
+            #     )
         elif attr.name == "axis" and node.op_type == "Flatten":
             kwargs["start_dim"] = extract_attr_values(attr)
         elif attr.name == "axis" or attr.name == "axes":
