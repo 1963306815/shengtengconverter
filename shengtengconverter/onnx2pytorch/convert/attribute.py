@@ -188,6 +188,8 @@ def extract_attributes(node):
             kwargs["size"] = extract_attr_values(attr)
         elif attr.name == "bias":
             kwargs["bias"] = extract_attr_values(attr)
+        elif attr.name == "ratio":
+            kwargs["p"] = extract_attr_values(attr)
         else:
             raise NotImplementedError(
                 "Extraction of attribute {} not implemented.".format(attr.name)

@@ -63,13 +63,16 @@ def convert_onnx_to_pytorch_all(path):
                 print(e)
 
 
-def _convert_onnx_to_pytorch_test(path):
+def convert_onnx_to_pytorch_batch_all(path):
     """
-    This function is used to test whether the onnx model can be converted to pytorch model without exception handling. Only for developers.
+    This function is used to convert onnx model to pytorch model in batch in the path.
     """
     onnx_model = list_onnx_models(path)
     for i in onnx_model:
-        convert_onnx_to_pytorch_batch(i)
+        try:
+            convert_onnx_to_pytorch_batch(i)
+        except Exception as e:
+            print(e)
 
 
 def convert_pytorch_to_onnx(pytorch_model_path, input_shape, onnx_model_path=None):

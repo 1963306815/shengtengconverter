@@ -58,9 +58,9 @@ for i in onnx_model_paths:
     trans.convert_onnx_to_pytorch(i, pytorch_path='path/to/save')
 ```
 
-另外，你可以直接通过main()函数一键运行以上流程，只需输入path，就会自动检索路径下的onnx模型并转换为pytorch模型：
+另外，你可以直接通过convert_onnx_to_pytorch_all()函数一键运行以上流程，只需输入path，就会自动检索路径下的onnx模型并转换为pytorch模型：
 ```python
-trans.main('path/contain/onnx')
+trans.convert_onnx_to_pytorch_all('path/contain/onnx')
 ```
 
 删除路径下的所有onnx模型：
@@ -122,6 +122,10 @@ print(output_info)
 - **3.1.3** (2021-09-18):
   - convert_onnx_to_pytorch_all()函数增加了异常处理，现在一个模型转换失败不会影响其他模型的转换
   - 增加了_convert_onnx_to_pytorch_test()函数，与前者的区别是没有异常处理，用于测试
+- **4.0.0** (2021-09-27):
+  - 增加了convert_onnx_to_pytorch_batch_all()函数，可以以实验模式批量转换onnx模型为pytorch模型
+  - operations.py中增加了对Dropout算子的显式支持
+  - attributes.py中增加了把ratio属性映射到p属性的分支，用于支持Dropout算子
 
 ## 作者
 - **[张志扬](https://github.com/1963306815)**

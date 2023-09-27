@@ -286,6 +286,8 @@ def convert_operations(onnx_graph, opset_version, batch_dim=0, enable_pruning=Tr
             if 'bias' in attributes:
                 attributes['k'] = attributes.pop('bias')
             op = torch.nn.LocalResponseNorm(**attributes)
+        elif node.op_type == "Dropout":
+            op = torch.nn.Dropout(**extract_attributes(node))
         else:
             op = getattr(torch, node.op_type.lower(), None)
             if op is None:
